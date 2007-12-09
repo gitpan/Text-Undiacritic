@@ -2,7 +2,7 @@ package Text::Undiacritic;
 
 use strict;
 use warnings;
-use version; our $VERSION = qv('0.01');
+use version; our $VERSION = qv('0.02');
 
 require Exporter;
 our @ISA = qw(Exporter); ## no critic

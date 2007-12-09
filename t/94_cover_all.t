@@ -6,6 +6,12 @@ use warnings;
 use File::Find;
 use Test::More;
 
+if ( not $ENV{TEST_AUTHOR} ) {
+    my $msg =
+        'Author test. Set (export) $ENV{TEST_AUTHOR} to a true value to run.';
+    plan( skip_all => $msg );
+}
+
 my $cover_html = '../cover_db/coverage.html'; # Devel::Cover report
 
 my $cover_goals = {
@@ -52,7 +58,7 @@ if ( -e $cover_html ) {
     close $file;
 }
 else {
-    my $msg = 
+    my $msg =
         "$cover_html not found. Run cover first.";
     plan( skip_all => $msg );
 }

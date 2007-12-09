@@ -2,7 +2,7 @@ use Module::Build;
 my $build = Module::Build->new(
     dist_abstract      => 'change characters with diacritics into their base character',
     dist_name          => 'Text-Undiacritic',
-    dist_version       => '0.01',
+    dist_version       => '0.02',
     module_name        => 'Text::Undiacritic',
     license            => 'artistic',
     create_makefile_pl => 'traditional',

@@ -6,6 +6,11 @@ use warnings;
 use File::Find;
 use Test::More;
 
+if ( not $ENV{TEST_AUTHOR} ) {
+    my $msg =
+        'Author test. Set (export) $ENV{TEST_AUTHOR} to a true value to run.';
+    plan( skip_all => $msg );
+}
 
 my %LIST;
 find(

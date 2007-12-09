@@ -1,6 +1,6 @@
 ---
 name: Text-Undiacritic
-version: 0.01
+version: 0.02
 author:
   - 'Helmut Wollmersdorfer C<< <WOLLMERS@cpan.org> >>'
 abstract: change characters with diacritics into their base character
@@ -23,7 +23,7 @@ build_requires:
 provides:
   Text::Undiacritic:
     file: lib/Text/Undiacritic.pm
-    version: v0.01
+    version: v0.02
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

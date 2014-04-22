@@ -1,29 +1,56 @@
-Text::Undiacritic version 0.02
+NAME
+    Text::Undiacritic - remove diacritics from a string
 
-This module provides a method to change characters with diacritics into their base character.
+VERSION
+    This document describes Text::Undiacritic 0.01
 
+SYNOPSIS
+        use Text::Undiacritic qw(undiacritic);
+        $ascii_string = undiacritic( $czech_string );
 
-INSTALLATION
+DESCRIPTION
+    Changes characters with diacritics into their base characters.
 
-To install this module, run the following commands:
+    Also changes into base character in cases where UNICODE does not provide
+    a decomposition.
 
-    perl Makefile.PL
-    make
-    make test
-    make install
+    E.g. all characters '... WITH STROKE' like 'LATIN SMALL LETTER L WITH
+    STROKE' do not have a decomposition. In the latter case the result will
+    be 'LATIN SMALL LETTER L'.
 
+    Removing diacritics is useful for matching text independent of spelling
+    variants.
 
-Alternatively, to install with Module::Build, you can use the following commands:
+SUBROUTINES/METHODS
+  undiacritic
+        $ascii_string = undiacritic( $characters );
 
-    perl Build.PL
-    ./Build
-    ./Build test
-    ./Build install
+    Removes diacritics from $characters and returns a simplified character
+    string.
 
+    The input string must be in character modus, i.e. UNICODE code points.
 
-COPYRIGHT AND LICENCE
+DIAGNOSTICS
+CONFIGURATION AND ENVIRONMENT
+DEPENDENCIES
+    *   version
 
-Copyright (C) 2007, Helmut Wollmersdorfer
+    *   charnames
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+    *   Unicode::Normalize
+
+INCOMPATIBILITIES
+BUGS AND LIMITATIONS
+    There is no experience if this module gives useful results for scripts
+    other than Latin.
+
+AUTHOR
+    Helmut Wollmersdorfer "<WOLLMERS@cpan.org>"
+
+LICENSE AND COPYRIGHT
+    Copyright (c) 2007, Helmut Wollmersdorfer "<WOLLMERS@cpan.org>". All
+    rights reserved.
+
+    This module is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+

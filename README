@@ -1,6 +1,14 @@
 NAME
     Text::Undiacritic - remove diacritics from a string
 
+    <a href="https://travis-ci.org/wollmers/Text-Undiacritic"><img
+    src="https://travis-ci.org/wollmers/Text-Undiacritic.png"
+    alt="Text-Undiacritic"></a> <a
+    href='https://coveralls.io/r/wollmers/Text-Undiacritic?branch=master'><i
+    mg
+    src='https://coveralls.io/repos/wollmers/Text-Undiacritic/badge.png?bran
+    ch=master' alt='Coverage Status' /></a>
+
 VERSION
     This document describes Text::Undiacritic 0.01
 
